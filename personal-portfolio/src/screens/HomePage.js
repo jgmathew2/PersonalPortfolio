@@ -4,8 +4,14 @@ import {AiFillGithub} from "react-icons/ai"
 import {FaGithubSquare} from "react-icons/fa"
 import {FiDownload} from 'react-icons/fi'
 import {AiFillLinkedin} from 'react-icons/ai'; 
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
+
+    const navigate = useNavigate(); 
+
+
+
     return (
 
         <>
@@ -51,7 +57,7 @@ export default function HomePage() {
 
                     <Row>
                         <Col xs lg = {6}>
-                            <Button href="https://drive.google.com/file/d/1JCAW3Ot9lSl9jucsjR7dMr2n0chjAg2w/view?usp=sharing"
+                            <Button href="https://drive.google.com/file/d/1JCAW3Ot9lSl9jucsjR7dMr2n0chjAg2w/view?usp=sharing" target="_blank"
                             style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}>
 
@@ -67,13 +73,13 @@ export default function HomePage() {
 
                         <Col xs lg = {{span: 1, offset: 1}}>
 
-                            <Button className="bg-transparent" style={{border:"0px"}}>
+                            <Button className="bg-transparent" style={{border:"0px"}} href="https://github.com/jgmathew2" target="_blank">
                                 <FaGithubSquare size="5.5vw" color="#D9D9D9" style={{marginTop:"0.25vh", marginLeft:"-1.75vw"}}/>
                             </Button>
                         </Col>
 
                         <Col xs lg = {{span: 1, offset: 1}}>
-                            <Button className="bg-transparent" style={{border:"0px"}}>
+                            <Button className="bg-transparent" style={{border:"0px"}} href="https://www.linkedin.com/in/johan-mathew-6b062427a/" target="_blank">
                                 <AiFillLinkedin size="6vw" color="#D9D9D9" style={{marginTop:"-0.25vh"}}/>
                             </Button>
                         </Col>
@@ -84,7 +90,8 @@ export default function HomePage() {
 
                             <Stack gap={4}>
                             <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
-                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}>
+                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
+                                onClick={()=>{navigate("/projectlist")}}>
 
                                 <p style={{marginTop:"-0.75vh"}}>Projects </p>
 
@@ -92,7 +99,8 @@ export default function HomePage() {
                             </Button>
 
                             <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
-                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}>
+                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
+                                onClick={()=>{navigate("/worklist")}}>
 
                                 <p style={{marginTop:"-0.75vh"}}>Work Experience </p>
 
@@ -100,7 +108,8 @@ export default function HomePage() {
                             </Button>
 
                             <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
-                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}>
+                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
+                                onClick={()=>{navigate("/courselist")}}>
 
                                 <p style={{marginTop:"-0.75vh"}}>Coursework </p>
 
