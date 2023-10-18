@@ -19,9 +19,8 @@ function App() {
             width: '100vw',
             minHeight: '100vh',
             overflow: 'scroll',
-            background: "#413434"
-
-
+            margin: 0,
+            background: "#413434",
           }}
           className="justify-content-center"
           fluid

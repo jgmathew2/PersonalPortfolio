@@ -1,6 +1,6 @@
 import {Row, Col, Stack} from 'react-bootstrap'
 
-import InfoCard from '../components/InfoCard';
+import WorkCard from '../components/WorkCard';
 
 export default function WorkList() {
 
@@ -20,11 +20,9 @@ export default function WorkList() {
 
         </Row>
 
-        <InfoCard title="New Project" description="My new project guys"></InfoCard>
-
-        <InfoCard title="New Project" description="My new project guys"></InfoCard>
-
-        <InfoCard title="New Project" description="My new project guys"></InfoCard>
+        <WorkCard title="Computer Science Teaching Assistant" timeline="Sep 2021 - Jun 2023" description="Computer Science TA, 
+        first at a local computer science academy called KTByte in Lexington, MA; then for my high school's AP Computer
+        Science class. Helped students complete their homework, and explain + teach concepts in object-oriented programming" ></WorkCard>
 
  
 

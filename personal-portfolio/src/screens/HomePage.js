@@ -10,8 +10,6 @@ export default function HomePage() {
 
     const navigate = useNavigate(); 
 
-
-
     return (
 
         <>
@@ -21,9 +19,9 @@ export default function HomePage() {
 
         </Row>
         <Row className="align-content-center" align="center">
-            <Col  xs lg = {{span: 6, offset: 3}} align="center" style={{height:"6vw"}}>
+            <Col  xs lg = {{span: 6, offset: 3}} align="center" style={{height:"6vmax"}}>
                 <div style={{background: "#D9D9D9", width:"100%", height:"100%",
-                    fontSize: "2.5vw", fontFamily: "JetBrainsMono", paddingTop: "1vw", borderRadius:"1vw"}}>
+                    fontSize: "2.5vmax", fontFamily: "JetBrainsMono", paddingTop: "1vw", borderRadius:"1vw"}}>
 
                     <p>
                     HI! MY NAME IS JOHAN MATHEW!
@@ -36,7 +34,7 @@ export default function HomePage() {
         </Row>
 
         <Row>
-            <Col xs={12} lg = {{span:7}}>
+            <Col xs lg = {{span:7}}>
 
                 <Image src = {mypic} style={{width: "56vw", margin: "2vh", borderRadius:"1vh"}}>
 
@@ -49,7 +47,7 @@ export default function HomePage() {
                     <Row>
                         <Col >
 
-                        <p style={{fontSize:"3vw", color:"white", marginTop:"3.5vh", fontFamily:'Kreon' }}>
+                        <p style={{fontSize:"3vmax", color:"white", marginTop:"3.5vh", fontFamily:'Kreon' }}>
                         I’m a student at the University of Maryland College-Park, and a full-stack developer. 
                         </p>
                         </Col>
@@ -58,7 +56,7 @@ export default function HomePage() {
                     <Row>
                         <Col xs lg = {6}>
                             <Button href="https://drive.google.com/file/d/1JCAW3Ot9lSl9jucsjR7dMr2n0chjAg2w/view?usp=sharing" target="_blank"
-                            style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
+                            style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}>
 
                                 <Stack direction="horizontal" gap={3} style={{paddingLeft:"1vw"}}>
@@ -74,13 +72,13 @@ export default function HomePage() {
                         <Col xs lg = {{span: 1, offset: 1}}>
 
                             <Button className="bg-transparent" style={{border:"0px"}} href="https://github.com/jgmathew2" target="_blank">
-                                <FaGithubSquare size="5.5vw" color="#D9D9D9" style={{marginTop:"0.25vh", marginLeft:"-1.75vw"}}/>
+                                <FaGithubSquare size="5vmax" color="#D9D9D9" style={{marginTop:"0.5vh", marginLeft:"-1.75vw"}}/>
                             </Button>
                         </Col>
 
                         <Col xs lg = {{span: 1, offset: 1}}>
                             <Button className="bg-transparent" style={{border:"0px"}} href="https://www.linkedin.com/in/johan-mathew-6b062427a/" target="_blank">
-                                <AiFillLinkedin size="6vw" color="#D9D9D9" style={{marginTop:"-0.25vh"}}/>
+                                <AiFillLinkedin size="5.5vmax" color="#D9D9D9" style={{marginTop:"0vh"}}/>
                             </Button>
                         </Col>
                     </Row>
