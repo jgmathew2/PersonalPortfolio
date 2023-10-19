@@ -6,6 +6,8 @@ import {FiDownload} from 'react-icons/fi'
 import {AiFillLinkedin} from 'react-icons/ai'; 
 import { useNavigate } from 'react-router-dom';
 
+import './HomePage.css'; 
+
 export default function HomePage() {
 
     const navigate = useNavigate(); 
@@ -33,17 +35,38 @@ export default function HomePage() {
             </Col>
         </Row>
 
+        {window.innerWidth <= window.innerHeight 
+            ? (
+                <Row align="center">
+                    <Col xs lg = {{span:12}}>
+
+                        <Image src = {mypic} style={{width: "50vmax", margin: "2vh", borderRadius:"1vh"}}>
+                        </Image>
+
+                    </Col>
+                </Row>
+            )
+            :   <></>
+        
+        }
+
         <Row>
-            <Col xs lg = {{span:7}}>
+
+            {window.innerWidth > window.innerHeight 
+                ? (
+                <Col xs lg = {{span:7}}>
 
                 <Image src = {mypic} style={{width: "56vw", margin: "2vh", borderRadius:"1vh"}}>
 
                 </Image>
-            </Col>
+                </Col>
+                )
+                : <></>
+            }
 
             <Col xs lg = {{span:5}}>
 
-                <Container fluid>
+                <Container fluid style={{margin:0}}>
                     <Row>
                         <Col >
 
@@ -53,14 +76,14 @@ export default function HomePage() {
                         </Col>
                     </Row>
 
-                    <Row>
+                    <Row style={{marginLeft: 0, marginRight: 0}}>
                         <Col xs lg = {6}>
                             <Button href="https://drive.google.com/file/d/1JCAW3Ot9lSl9jucsjR7dMr2n0chjAg2w/view?usp=sharing" target="_blank"
                             style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}>
 
                                 <Stack direction="horizontal" gap={3} style={{paddingLeft:"1vw"}}>
-                                <p style={{marginTop:"-0.75vh"}}>Resume </p>
+                                <p style={{marginTop:"-0.75vh", fontFamily: "JetBrainsMono"}}>Resume </p>
 
                                 <FiDownload style={{marginTop:"-2vh"}}></FiDownload>
 
@@ -72,13 +95,13 @@ export default function HomePage() {
                         <Col xs lg = {{span: 1, offset: 1}}>
 
                             <Button className="bg-transparent" style={{border:"0px"}} href="https://github.com/jgmathew2" target="_blank">
-                                <FaGithubSquare size="5vmax" color="#D9D9D9" style={{marginTop:"0.5vh", marginLeft:"-1.75vw"}}/>
+                                <FaGithubSquare size="9.5vmin" color="#D9D9D9" style={{marginTop:"0.5vh", marginLeft:"-1.75vw"}}/>
                             </Button>
                         </Col>
 
                         <Col xs lg = {{span: 1, offset: 1}}>
                             <Button className="bg-transparent" style={{border:"0px"}} href="https://www.linkedin.com/in/johan-mathew-6b062427a/" target="_blank">
-                                <AiFillLinkedin size="5.5vmax" color="#D9D9D9" style={{marginTop:"0vh"}}/>
+                                <AiFillLinkedin size="10.5vmin" color="#D9D9D9" style={{marginTop:"0vh"}}/>
                             </Button>
                         </Col>
                     </Row>
@@ -86,8 +109,8 @@ export default function HomePage() {
                     <Row>
                         <Col xs lg = {11}>
 
-                            <Stack gap={4}>
-                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
+                            <Stack gap={ window.innerWidth > window.innerHeight ? 4 : 0}>
+                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
                                 onClick={()=>{navigate("/projectlist")}}>
 
@@ -96,7 +119,7 @@ export default function HomePage() {
                                 
                             </Button>
 
-                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
+                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
                                 onClick={()=>{navigate("/worklist")}}>
 
@@ -105,8 +128,8 @@ export default function HomePage() {
                                 
                             </Button>
 
-                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vw", 
-                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
+                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
+                                background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", marginBottom:"2vh", borderRadius:"1vw"}}
                                 onClick={()=>{navigate("/courselist")}}>
 
                                 <p style={{marginTop:"-0.75vh"}}>Coursework </p>

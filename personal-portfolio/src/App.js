@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import HomePage from './screens/HomePage';
-import logo from './logo.svg';
 import ProjectList from './screens/ProjectList';
 import WorkList from './screens/WorkList';
 import CourseList from './screens/CourseList';
@@ -9,6 +8,7 @@ import CourseList from './screens/CourseList';
 
 
 function App() {
+
   return (
     <>
     <BrowserRouter>
@@ -17,8 +17,10 @@ function App() {
             paddingLeft: 0,
             paddingRight: 0,
             width: '100vw',
+            maxWidth: window.screen.innerWidth,
             minHeight: '100vh',
             overflow: 'scroll',
+            horizontalOverrflow: 'hidden', 
             margin: 0,
             background: "#413434",
           }}
@@ -34,13 +36,6 @@ function App() {
             </Route>
           </Routes>
         </Container>
-      <Routes>
-        <Route>
-
-          
-        </Route>
-
-      </Routes>
     </BrowserRouter>
     </>
   );

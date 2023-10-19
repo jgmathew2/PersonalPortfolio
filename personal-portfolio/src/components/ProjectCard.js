@@ -35,7 +35,6 @@ export default function ProjectCard({title, timeline, description, skills, url})
 
                     <div hidden={!visible}>
 
-                    
                         <div style={{width:"100%", background:"black", height:"0.25vh", marginTop:"-1.5vh"}}> </div>
 
                         <p style={{margin: "2vh", fontSize:"1.5vmax"}}>{"Timeline: " + timeline}</p>
