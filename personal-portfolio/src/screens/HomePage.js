@@ -40,7 +40,7 @@ export default function HomePage() {
                 <Row align="center">
                     <Col xs lg = {{span:12}}>
 
-                        <Image src = {mypic} style={{width: "50vmax", margin: "2vh", borderRadius:"1vh"}}>
+                        <Image src = {mypic} style={{width: "40vmax", borderRadius:"1vh", marginTop:"4vh"}}>
                         </Image>
 
                     </Col>
@@ -64,7 +64,7 @@ export default function HomePage() {
                 : <></>
             }
 
-            <Col xs lg = {{span:5}}>
+            <Col xs = {12} lg = {{span:5}}>
 
                 <Container fluid style={{margin:0}}>
                     <Row>
@@ -76,10 +76,14 @@ export default function HomePage() {
                         </Col>
                     </Row>
 
-                    <Row style={{marginLeft: 0, marginRight: 0}}>
+                    <Row style={{marginLeft: 0, marginRight: 0}} align="center">
                         <Col xs lg = {6}>
+
+                            <Stack direction="horizontal">
+
+                            
                             <Button href="https://drive.google.com/file/d/1JCAW3Ot9lSl9jucsjR7dMr2n0chjAg2w/view?usp=sharing" target="_blank"
-                            style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
+                            style={{width:"100%", height: "8vmin", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}>
 
                                 <Stack direction="horizontal" gap={3} style={{paddingLeft:"1vw"}}>
@@ -90,16 +94,18 @@ export default function HomePage() {
                                 </Stack>
                                 
                             </Button>
+
+                            </Stack>
                         </Col>
 
-                        <Col xs lg = {{span: 1, offset: 1}}>
+                        <Col xs lg = {{span: 1, offset: 1}} >
 
                             <Button className="bg-transparent" style={{border:"0px"}} href="https://github.com/jgmathew2" target="_blank">
                                 <FaGithubSquare size="9.5vmin" color="#D9D9D9" style={{marginTop:"0.5vh", marginLeft:"-1.75vw"}}/>
                             </Button>
                         </Col>
 
-                        <Col xs lg = {{span: 1, offset: 1}}>
+                        <Col xs lg = {{span: 1, offset: 1}} >
                             <Button className="bg-transparent" style={{border:"0px"}} href="https://www.linkedin.com/in/johan-mathew-6b062427a/" target="_blank">
                                 <AiFillLinkedin size="10.5vmin" color="#D9D9D9" style={{marginTop:"0vh"}}/>
                             </Button>
@@ -109,8 +115,8 @@ export default function HomePage() {
                     <Row>
                         <Col xs lg = {11}>
 
-                            <Stack gap={ window.innerWidth > window.innerHeight ? 4 : 0}>
-                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
+                            <Stack gap={ window.innerWidth > window.innerHeight ? 4 : 4}>
+                            <Button style={{width:"100%", height: "8vmin", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
                                 onClick={()=>{navigate("/projectlist")}}>
 
@@ -119,7 +125,7 @@ export default function HomePage() {
                                 
                             </Button>
 
-                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
+                            <Button style={{width:"100%", height: "8vmin", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", borderRadius:"1vw"}}
                                 onClick={()=>{navigate("/worklist")}}>
 
@@ -128,7 +134,7 @@ export default function HomePage() {
                                 
                             </Button>
 
-                            <Button style={{width:"100%", height: "8vh", color:"black", fontSize:"3vmax", 
+                            <Button style={{width:"100%", height: "8vmin", color:"black", fontSize:"3vmax", 
                                 background:"#D9D9D9", fontFamily: "JetBrainsMono", marginTop:"2vh", marginBottom:"2vh", borderRadius:"1vw"}}
                                 onClick={()=>{navigate("/courselist")}}>
 

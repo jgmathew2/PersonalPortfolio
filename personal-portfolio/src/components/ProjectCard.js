@@ -21,7 +21,7 @@ export default function ProjectCard({title, timeline, description, skills, url})
                             {title}:
                         </p>
 
-                        <Button style={{background:"transparent", border: "0px", marginLeft:"27vw", marginTop:"-1vh"}
+                        <Button style={{background:"transparent", border: "0px", marginLeft:"25vw", marginTop:"-1vh"}
                             }>
                            
                            { visible
@@ -44,11 +44,9 @@ export default function ProjectCard({title, timeline, description, skills, url})
                         <p style={{margin: "2vh", fontSize:"1.5vmax"}}>{"Skills: " + skills}</p>
 
                         {url != null 
-                            ? <p style={{margin: "2vh", fontSize:"1.5vmax"}}> {"URL: " + url}</p>
+                            ? <p style={{margin: "2vh", fontSize:"1.5vmax"}}> URL: {(<a href={"" + url}> {url}</a>)}</p>
                             : <></>
-                        } 
-
-
+                        }
 
                     </div>
 

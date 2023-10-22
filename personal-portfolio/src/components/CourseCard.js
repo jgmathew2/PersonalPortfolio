@@ -18,11 +18,11 @@ export default function CourseCard({title, location, timeline}) {
                     
                 <Stack direction="horizontal" onClick={() => {showDescription(!visible)}}>
 
-                    <p style={{fontSize:"2vmax", marginLeft:"1.5vh", marginTop:"1vh",  minWidth:"50vw", overflow:"hidden"}}>
+                    <p style={{fontSize:"2vmax", marginLeft:"1.5vh", marginTop:"1vh",  width:"50vw", overflow:"hidden"}}>
                         {title}:
                     </p>
 
-                    <Button style={{background:"transparent", border: "0px", marginLeft:"27vw", marginTop:"-1vh"}
+                    <Button style={{background:"transparent", border: "0px", marginLeft:"25vw", marginTop:"-1vh"}
                         }>
                     
                     { visible
