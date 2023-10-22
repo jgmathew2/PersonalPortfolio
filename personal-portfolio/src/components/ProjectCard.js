@@ -44,7 +44,7 @@ export default function ProjectCard({title, timeline, description, skills, url})
                         <p style={{margin: "2vh", fontSize:"1.5vmax"}}>{"Skills: " + skills}</p>
 
                         {url != null 
-                            ? <p style={{margin: "2vh", fontSize:"1.5vmax"}}> URL: {(<a href={"" + url}> {url}</a>)}</p>
+                            ? <p style={{margin: "2vh", fontSize:"1.5vmax"}}> URL: {(<a target="_blank" href={"" + url}> {url}</a>)}</p>
                             : <></>
                         }
 
